@@ -1,1 +1,22 @@
 @import 'ember-paper';
+
+.ember-application, html {
+  background-color: #ccff90;
+}
+
+md-toolbar {
+  background-color: #32cb00 !important;
+}
+
+.question-card {
+  width: 60vw;
+}
+
+
+md-card {
+  background-color: #76ff03 !important;
+}
+
+.header-h1 {
+margin-left: 10vw;
+}

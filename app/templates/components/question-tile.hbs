@@ -1,13 +1,18 @@
-{{#paper-card as |card|}}
+<div class="question-card">
+  {{#paper-card as |card|}}
   {{#card.title as |title|}}
     {{#title.text as |text|}}
       {{#text.headline}}{{question.title}}{{/text.headline}}
       {{#text.subhead}}<small>from <em>{{question.user.name}}</em></small>{{/text.subhead}}
     {{/title.text}}
-    {{title.media size="lg" src="tomster-9918e85a7f1a28c78b484c34cbe88579.png" alt="Tomster" title="Tomster"}}
   {{/card.title}}
+  {{#card.content}}
+  <p>{{question.body}}</p>
+  {{/card.content}}
   {{#card.actions}}
-    {{#paper-button}}Action 1{{/paper-button}}
-    {{#paper-button}}Action 2{{/paper-button}}
+    {{#paper-button}}Upvote{{/paper-button}}
+    {{#paper-button}}Downvote{{/paper-button}}
+    {{#paper-button}}See Answers{{/paper-button}}
   {{/card.actions}}
 {{/paper-card}}
+</div>

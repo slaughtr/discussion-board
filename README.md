@@ -107,11 +107,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 * Files: index, question, profile (containing all user's questions and answers)
 * Question/answer editing/deleting
 * DB relation (Question one to many Answer, Answer many to one Question, Question many to one User, Comment many to one User)
-####FURTHER EXPLORATION
+#### FURTHER EXPLORATION
 * Admin account (how to handle this for code review?)
 * Upvote/downvote (simple point system in question/answer models)
 * Tags (Many to many with questions)
-
+#### DREAMS
+* Implement Untapped API
 
 ## Beginning Plan
 #### templates

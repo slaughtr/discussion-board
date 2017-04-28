@@ -1,2 +1,22 @@
-
+{{#paper-toolbar as |toolbar|}}
+     {{#toolbar.tools}}
+     {{#link-to 'index'}}
+       {{#paper-button}}
+         Go Home
+       {{/paper-button}}
+       {{/link-to}}
+       <span class="flex"><h2>Beer And Programming</h2></span>
+       {{#paper-button raised=true}}
+         Learn More
+       {{/paper-button}}
+       {{#paper-button mini=true aria-label="Favorite"}}
+        {{paper-icon "favorite"}}
+       {{/paper-button}}
+       {{#if session.isAuthenticated}}
+          <span>{{session.currentUser.displayName}} <a {{action "signOut"}} class="btn">{{fa-icon 'sign-out'}}</a></span>
+        {{else}}
+          <a {{action "signIn" "google"}} class="btn">{{fa-icon "google" size="lg"}}</a>
+        {{/if}}
+     {{/toolbar.tools}}
+   {{/paper-toolbar}}
 {{outlet}}
