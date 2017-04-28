@@ -111,6 +111,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 #### FURTHER EXPLORATION
 * Admin account (how to handle this for code review?)
 * Upvote/downvote (simple point system in question/answer models)
+  * TODO: add points model with many to one to users relation, implement is save-answer.js and save-question.js
 * Tags (Many to many with questions)
 #### DREAMS
 * Implement Untapped API

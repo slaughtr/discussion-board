@@ -10,9 +10,54 @@
   <p>{{question.body}}</p>
   {{/card.content}}
   {{#card.actions}}
+  {{#if session.isAuthenticated}}
     {{#paper-button}}Upvote{{/paper-button}}
     {{#paper-button}}Downvote{{/paper-button}}
-    {{#paper-button}}See Answers{{/paper-button}}
+  {{/if}}
+    {{#paper-button onClick=(action 'seeAnswers')}}See Answers{{/paper-button}}
   {{/card.actions}}
 {{/paper-card}}
+
+{{#liquid-if canSeeAnswers class='answersCard'}}
+  {{#paper-card as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{#text.headline}}Have an answer? <small style="font-size: 10px">Answering as {{session.currentUser.displayName}}</small>{{/text.headline}}
+      {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+      {{#paper-form onSubmit=(action "saveAnswer") as |form|}}
+        <div class="layout-row layout-align-space-around-center">
+          <div class="flex-90 layout-column">
+            {{paper-input textarea=true block=true label="Text" maxlength=666 passThru=(hash rows=2 maxRows=2) value=text onChange=(action (mut text))}}
+          </div>
+        </div>
+        <div class="layout-row">
+          {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+        </div>
+      {{/paper-form}}
+      <div class="layout-row layout-align-space-around-center">
+        <div class="flex layout-column comment-card">
+          {{#paper-list}}
+            {{#paper-subheader}}Recent Comment{{/paper-subheader}}
+            {{#each model=comment as |comment|}}
+                {{paper-divider}}
+                {{#paper-item class="md-3-line md-long-text"}}
+                  <img src={{answer.user.photoURL}} alt={{answer.user.name}} class="md-avatar"/>
+                  <div class="md-list-item-text">
+                    <h3>{{answer.user.name}}</h3>
+                    <p style="word-break: break-all; word-wrap: break-word;">{{answer.text}}</p>
+                  </div>
+                {{/paper-item}}
+            {{else}}
+              <p>This post has no answers, be the first to answer.</p>
+            {{/each}}
+          {{/paper-list}}
+        </div>
+      </div>
+
+    {{/card.content}}
+  {{/paper-card}}
+
+  {{/liquid-if}}
 </div>
