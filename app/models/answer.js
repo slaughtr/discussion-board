@@ -5,5 +5,5 @@ export default DS.Model.extend({
   timestamp: DS.attr(),
   user: DS.belongsTo('user', {async: true}),
   question: DS.belongsTo('question', {async: true}),
-  points: DS.attr()
+  // points: DS.attr()
 })

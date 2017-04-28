@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       user.then(result => {
         var params = {
           text: this.get('text'),
-          timestamp: (new Date().toJSON()),
+          timestamp: "test",
           question: this.get('question'),
           user: result
         };

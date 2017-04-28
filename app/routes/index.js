@@ -10,21 +10,21 @@ export default Ember.Route.extend({
     saveQuestion (params) {
       this.get('saveQuestion').saveQuestion(params)
     },
-    upvoteQuestion(params) {
-      this.get('saveQuestion').addFavorite(params);
-    },
-    downvoteQuestion(params) {
-      this.get('saveQuestion').removeFavorite(params);
-    },
+    // upvoteQuestion(params) {
+    //   this.get('saveQuestion').addFavorite(params);
+    // },
+    // downvoteQuestion(params) {
+    //   this.get('saveQuestion').removeFavorite(params);
+    // },
     saveAnswer(params) {
-      this.get('saveAnswer').saveComment(params);
+      this.get('saveAnswer').saveAnswer(params);
     },
-    upvoteAnswer(params) {
-      this.get('saveAnswer').addFavorite(params);
-    },
-    downvoteAnswer(params) {
-      this.get('saveAnswer').removeFavorite(params);
-    }
+    // upvoteAnswer(params) {
+    //   this.get('saveAnswer').addFavorite(params);
+    // },
+    // downvoteAnswer(params) {
+    //   this.get('saveAnswer').removeFavorite(params);
+    // }
   }
 
 })
