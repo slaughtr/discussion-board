@@ -30,6 +30,7 @@ You will need the following things properly installed on your computer.
 * `bower install`
 * `ember install emberfire`
 * `ember install ember-paper`
+* To prepopulate your database with a few questions, upload the datas.json file to firebase via the console.
 
 
 ## Running / Development
@@ -98,15 +99,15 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ## TODO
 
-* Build starting JSON for Firebase
-* Google Auth
-* Question model
-* Answer model
-* Header or navbar (probably header)
+~~* Build starting JSON for Firebase~~
+~~* Google Auth~~
+~~* Question model
+~~* Answer model~~
+~~* Header or navbar (probably header)~~
 * Header/Navbar should contain links to github/linked in, and obviously navigation
-* Files: index, question, profile (containing all user's questions and answers)
+~~* Files: index, question, profile (containing all user's questions and answers)~~
 * Question/answer editing/deleting
-* DB relation (Question one to many Answer, Answer many to one Question, Question many to one User, Comment many to one User)
+~~* DB relation (Question one to many Answer, Answer many to one Question, Question many to one User, Comment many to one User)~~
 #### FURTHER EXPLORATION
 * Admin account (how to handle this for code review?)
 * Upvote/downvote (simple point system in question/answer models)
@@ -116,7 +117,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ## Beginning Plan
 #### templates
- * Index (should contain most recent questions)
+ ~~* Index (should contain most recent questions)~~
  * Question (individual question page, also shows comments)
  * User (shows all user's questions and answers, common tags?, total points via up/down voting?)
  * Tag (show all questions with a certain tag, probably re-use index?)
