@@ -39,7 +39,7 @@
       <div class="layout-row layout-align-space-around-center">
         <div class="flex layout-column comment-card">
           {{#paper-list}}
-            {{#each answer as |answer|}}
+            {{#each question.answers as |answer|}}
                 {{paper-divider}}
                 {{#paper-item class="md-3-line md-long-text"}}
                   <img src={{answer.user.photoURL}} alt={{answer.user.name}} class="md-avatar"/>
