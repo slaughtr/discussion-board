@@ -1,0 +1,32 @@
+{
+  "questions" : [{
+    "title" : "Is Pabst good for Java?",
+    "body" : "Just wondering if anyone has found any advantages for Pabst over Rainier for Java?",
+    "userID" : "bBJT3sZ4o0Rq1YYiZpnRwLnJweY2",
+    "timestamp" : "2017-04-26T12:25:43.511Z",
+    "points" : 1
+  }, {
+    "title" : "JavaScript and IPAs",
+    "body" : "I have recently discovered that JavaScript works wonderfully with Sierra Nevada's Pale Ale. I was wondering if anyone has had much success with IPAs? I don't want to funk up my junk",
+    "userID" : "bBJT3sZ4o0Rq1YYiZpnRwLnJweY2",
+    "timestamp" : "2017-04-26T12:25:43.511Z",
+    "points" : 1
+  }, {
+    "title" : "Dark beer with a dark theme",
+    "body" : "Anyone else notice that dark beers go really well with dark themes? They really accompany everything well, regardless of language used. What's your favorite combo?",
+    "userID" : "bBJT3sZ4o0Rq1YYiZpnRwLnJweY2",
+    "timestamp" : "2017-04-26T12:25:43.511Z",
+    "points" : 1
+  }, {
+    "title" : "Considering moving to wine?",
+    "body" : "I'm considering moving to wine over beer. What's the communities opinion on the tannic impact of my code?",
+    "userID" : "bBJT3sZ4o0Rq1YYiZpnRwLnJweY2",
+    "timestamp" : "2017-04-26T12:25:43.511Z",
+    "points" : 1
+  }],
+  "users": [{
+    "name": "Dallas",
+    "userID": "bBJT3sZ4o0Rq1YYiZpnRwLnJweY2",
+    "photoURL": "http://orig15.deviantart.net/5470/f/2010/105/4/5/random_person_by_vurtov.jpg"
+    }]
+}
