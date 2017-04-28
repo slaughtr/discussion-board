@@ -5,13 +5,12 @@
          Go Home
        {{/paper-button}}
        {{/link-to}}
-       <span class="flex"><h2>Beer And Programming</h2></span>
+       <span class="flex"><h2>beer+programming</h2></span>
+       <a href="https://github.com/slaughtr/discussion-board">
        {{#paper-button raised=true}}
          Learn More
        {{/paper-button}}
-       {{#paper-button mini=true aria-label="Favorite"}}
-        {{paper-icon "favorite"}}
-       {{/paper-button}}
+     </a>
        {{#if session.isAuthenticated}}
           <span>{{session.currentUser.displayName}} <a {{action "signOut"}} class="btn">{{fa-icon 'sign-out'}}</a></span>
         {{else}}
