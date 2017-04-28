@@ -112,13 +112,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 
 ## Beginning Plan
-####templates
+#### templates
  * Index (should contain most recent questions)
  * Question (individual question page, also shows comments)
  * User (shows all user's questions and answers, common tags?, total points via up/down voting?)
  * Tag (show all questions with a certain tag, probably re-use index?)
 
-####styling
+#### styling
  * User Ember Paper because material design is sexy and quick
  * Font Awesome Icons or Material Icons (probably a mix)
  * Ember Burger Menu? May be overkill?
