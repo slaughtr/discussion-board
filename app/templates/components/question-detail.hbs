@@ -19,13 +19,19 @@
 {{/paper-card}}
 
 {{#liquid-if canSeeAnswers class='answersCard'}}
+
   {{#paper-card as |card|}}
     {{#card.title as |title|}}
       {{#title.text as |text|}}
+      {{#if session.isAuthenticated}}
         {{#text.headline}}Have an answer? <small style="font-size: 10px">Answering as {{session.currentUser.displayName}}</small>{{/text.headline}}
+        {{else}}
+        {{#text.headline}}Have an answer? <small style="font-size: 10px">Log in and help out!</small>{{/text.headline}}
+        {{/if}}
       {{/title.text}}
     {{/card.title}}
     {{#card.content}}
+    {{#if session.isAuthenticated}}
       {{#paper-form onSubmit=(action "saveAnswer") as |form|}}
         <div class="layout-row layout-align-space-around-center">
           <div class="flex-90 layout-column">
@@ -36,6 +42,7 @@
           {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
         </div>
       {{/paper-form}}
+      {{/if}}
       <div class="layout-row layout-align-space-around-center">
         <div class="flex layout-column comment-card">
           {{#paper-list}}
@@ -59,4 +66,5 @@
   {{/paper-card}}
 
   {{/liquid-if}}
+
 </div>
