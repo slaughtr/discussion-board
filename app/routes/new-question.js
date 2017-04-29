@@ -5,6 +5,7 @@ export default Ember.Route.extend({
   actions: {
     saveQuestion (params) {
       this.get('saveQuestion').saveQuestion(params)
+      this.transitionTo('index')
     },
   }
 });
