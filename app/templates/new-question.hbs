@@ -1,3 +1,4 @@
 {{#if session.isAuthenticated}}
-  {{new-question saveQuestion='saveQuestion' userid='session.currentUser.uid' user=user}}
+  {{new-question saveQuestion='saveQuestion' session=session}}
 {{/if}}
+<h1>{{session.currentUser.uid}}</h1>

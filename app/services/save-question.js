@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   store: Ember.inject.service('store'),
   saveQuestion(params) {
-    console.log("in saveQuestion");
     var newQuestion = this.get('store').createRecord('question', params);
     var user = params.user;
     user.get('questions').addObject(newQuestion);

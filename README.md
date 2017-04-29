@@ -28,14 +28,16 @@ You will need the following things properly installed on your computer.
 * `cd discussion-board`
 * `npm install`
 * `bower install`
+#### if the app won't serve or looks super weird:
 * `ember install emberfire`
 * `ember install ember-paper`
+* NOTE: to install ember-paper, you must first move/rename app/styles/app.scss, otherwise ember-paper installation will hang with no error message. After installation, just move that .scss sweetness back/rename it.
 * To prepopulate your database with a few questions, upload the datas.json file to firebase via the console.
 
 
 ## Running / Development
 
-* You will first need to create a Firebase app at the Firebase link above. You will use information from that app in the .env file as detailed below.
+* You will first need to create a Firebase app at the Firebase link above. You will use information from that app (click on 'Add Firebase to your web app') in the .env file as detailed below.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
@@ -57,6 +59,9 @@ exports.firebaseConfig = {
   "rules": {
     ".read": true,
     ".write": "auth != null",
+    "users": {
+      ".indexOn": "userID"
+    }
   }
 }
 ```
@@ -103,7 +108,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ~~Google Auth~~
 
-~~Question model
+~~Question model~~
 
 ~~Answer model~~
 
