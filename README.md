@@ -9,6 +9,8 @@ This project is a discussion board built with Ember.js. It is a forum for progra
 
 It will incorporate Google authentication via EmberFire and Torii for posting, and several Ember packages as seen fit. It is styled using Google's Material Design and heaps of eye-burning bright green. ENJOY!
 
+![readmepic](/readmepic.png)
+
 
 ## Prerequisites
 
