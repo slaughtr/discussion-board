@@ -124,11 +124,22 @@ Make use of the many generators for code, try `ember help generate` for more det
  * Tag (show all questions with a certain tag, probably re-use index?)
 
 #### styling
- * User Ember Paper because material design is sexy and quick
- * Font Awesome Icons or Material Icons (probably a mix)
- * Ember Burger Menu? May be overkill?
+ ~~* User Ember Paper because material design is sexy and quick~~
+ ~~* Font Awesome Icons or Material Icons (probably a mix)~~
+ ~~* Ember Burger Menu? May be overkill?~~
  * CSS as seen fit
  * ![divs everywhere](https://media.makeameme.org/created/divs-divs-everywhere-ntf4n9.jpg)
+
+
+# Known Problems
+ * Between EmberFire, Torii, npm, and Ember dependencies, there can be some crazy strange weird stupid version problems. As of the time of writing, the following works:
+ ```
+ "ember-cli": "2.10.0",
+ "ember-data": "^2.10.0",
+ "emberfire": "2.0.7",
+ "torii": "0.6.1"
+ ```
+Any attempt to change this could result in certain death. Or just really strange, hard to diagnose errors. Check the contact section if you're having problems. I'll happily help any way I can.
 
 
 ## License
