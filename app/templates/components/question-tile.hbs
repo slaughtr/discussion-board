@@ -2,7 +2,7 @@
   {{#paper-card as |card|}}
   {{#card.title as |title|}}
     {{#title.text as |text|}}
-      {{#text.headline}}{{question.title}}{{/text.headline}}
+      {{#text.headline}}{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}{{/text.headline}}
       {{#text.subhead}}<small>from <em>{{question.user.name}}</em></small>{{/text.subhead}}
     {{/title.text}}
   {{/card.title}}

@@ -7,9 +7,6 @@ export default Ember.Route.extend({
     return this.store.findAll('question', {reload: true}).then(questions => questions.sortBy('timestamp').reverse())
   },
   actions: {
-    saveQuestion (params) {
-      this.get('saveQuestion').saveQuestion(params)
-    },
     // upvoteQuestion(params) {
     //   this.get('saveQuestion').addFavorite(params);
     // },
@@ -25,6 +22,7 @@ export default Ember.Route.extend({
     // downvoteAnswer(params) {
     //   this.get('saveAnswer').removeFavorite(params);
     // }
-  }
+  },
+
 
 })

@@ -8,6 +8,16 @@ md-toolbar {
   background-color: #32cb00 !important;
 }
 
+a {
+  color: #484848;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: overline;
+    color: white;
+  }
+}
+
 .question-card {
   width: 60vw;
 }

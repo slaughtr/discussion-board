@@ -1,21 +1,29 @@
 {{#paper-toolbar as |toolbar|}}
-     {{#toolbar.tools}}
-     {{#link-to 'index'}}
-       {{#paper-button}}
-         Go Home
-       {{/paper-button}}
-       {{/link-to}}
-       <span class="flex"><h2>beer+programming</h2></span>
-       <a href="https://github.com/slaughtr/discussion-board">
-       {{#paper-button raised=true}}
-         Learn More
-       {{/paper-button}}
-     </a>
-       {{#if session.isAuthenticated}}
-          <span>{{session.currentUser.displayName}} <a {{action "signOut"}} class="btn">{{fa-icon 'sign-out'}}</a></span>
-        {{else}}
-          <a {{action "signIn" "google"}} class="btn">{{fa-icon "google" size="lg"}}</a>
-        {{/if}}
-     {{/toolbar.tools}}
-   {{/paper-toolbar}}
+  {{#toolbar.tools}}
+    <div class="layout-column">
+      {{#link-to 'index'}}
+        {{#paper-button}}
+        Go Home
+        {{/paper-button}}
+      {{/link-to}}
+      {{#link-to 'new-question'}}
+        {{#paper-button}}
+        New Question
+        {{/paper-button}}
+      {{/link-to}}
+
+    </div>
+    <span class="flex"><h2>beer+programming</h2></span>
+    <a href="https://github.com/slaughtr/discussion-board">
+    {{#paper-button raised=true}}
+    Learn More
+    {{/paper-button}}
+    </a>
+    {{#if session.isAuthenticated}}
+      <span>{{session.currentUser.displayName}} <a {{action "signOut"}} class="btn">{{fa-icon 'sign-out'}}</a></span>
+    {{else}}
+      <a {{action "signIn" "google"}} class="btn">{{fa-icon "google" size="lg"}}</a>
+    {{/if}}
+  {{/toolbar.tools}}
+{{/paper-toolbar}}
 {{outlet}}

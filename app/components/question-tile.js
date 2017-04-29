@@ -3,11 +3,11 @@ import Ember from 'ember';
 
 
 export default Ember.Component.extend({
+
  getUser: Ember.inject.service('get-user'),
   canSeeAnswers: false,
   actions: {
     seeAnswers: function() {
-      var user = this.get('getUser').getUser(this.get('userid'));
       this.toggleProperty('canSeeAnswers');
     },
     saveAnswer: function() {
