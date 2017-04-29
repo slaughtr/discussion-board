@@ -5,9 +5,9 @@
 #### By _**{Dallas Slaughter}**_
 
 
-This project is a discussion board built with Ember.js. It is a discussion board for programmers to decide which beer makes them program more better. Allowing questions and answers, the board will facilitate the sharing of a very select set of information, closely guarded for the last 5000 years.
+This project is a discussion board built with Ember.js. It is a forum for programmers to decide which beer makes them program more better. Allowing questions and answers, the board will facilitate the sharing of a very select set of information, closely guarded for the last 5000 years.
 
-It will incorporate Google authentication via EmberFire and Torii for posting, and several Ember packages as seen fit.
+It will incorporate Google authentication via EmberFire and Torii for posting, and several Ember packages as seen fit. It is styled using Google's Material Design and heaps of eye-burning bright green. ENJOY!
 
 
 ## Prerequisites
@@ -69,7 +69,7 @@ exports.firebaseConfig = {
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details. You can use this to easily add new components and templates for further feature integration.
+Make use of the many generators for code, try `ember help generate` for more details. You can use this to easily add new components and templates for further feature integration, such as all the things on the TODO list below! Don't forget to make a pull request :)
 
 
 ### Running Tests
@@ -91,7 +91,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+* [ember-paper](http://miguelcobain.github.io/ember-paper/release-1/)
 
 ## Support and Contact
 
@@ -99,10 +99,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 
 ## Implemented Features
-
-
-
-## TODO
 
 ~~Build starting JSON for Firebase~~
 
@@ -114,12 +110,28 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ~~Header or navbar (probably header)~~
 
-* Header/Navbar should contain links to github/linked in, and obviously navigation
+~~Header/Navbar should contain links to github/linked in, and obviously navigation~~
 ~~Files: index, question, profile (containing all user's
 questions and answers)~~
-* Question/answer editing/deleting
+
 ~~DB relation (Question one to many Answer, Answer many to one
   Question, Question many to one User, Comment many to one User)~~
+
+  ~~Index (should contain most recent questions)~~
+
+  ~~Question (individual question page, also shows comments)~~
+
+  ~~User Ember Paper because material design is sexy and quick~~
+
+  ~~Font Awesome Icons or Material Icons (probably a mix)~~
+
+  ~~Ember Burger Menu? May be overkill?~~
+
+  ~~CSS as seen fit~~
+
+## TODO
+* Question/answer editing/deleting
+
 #### FURTHER EXPLORATION
 * Admin account (how to handle this for code review?)
 * Upvote/downvote (simple point system in question/answer models)
@@ -130,20 +142,13 @@ questions and answers)~~
 
 ## Beginning Plan
 #### templates
- ~~Index (should contain most recent questions)~~
 
- * Question (individual question page, also shows comments)
  * User (shows all user's questions and answers, common tags?, total points via up/down voting?)
  * Tag (show all questions with a certain tag, probably re-use index?)
 
 #### styling
- ~~User Ember Paper because material design is sexy and quick~~
 
- ~~Font Awesome Icons or Material Icons (probably a mix)~~
-
- ~~Ember Burger Menu? May be overkill?~~
-
- * CSS as seen fit
+* All done and moved to implemented features!
 
   ![divs everywhere](https://media.makeameme.org/created/divs-divs-everywhere-ntf4n9.jpg)
 

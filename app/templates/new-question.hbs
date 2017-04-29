@@ -1,12 +1,9 @@
 {{#if session.isAuthenticated}}
   {{new-question saveQuestion='saveQuestion' session=session}}
-
-  {{else}}
+{{else}}
   <div class="notLoggedIn">
-
-  <h1>You have to be logged in to do this!</h1>
-  <h2>To log in, press the big G in the upper right corner and authenticate with Google.</h2>
-  <h4>Alternatively, give Dallas a 6 pack of beer and he'll do it for you</h4>
-</div>
-  
+    <h1>You have to be logged in to do this!</h1>
+    <h2>To log in, press the big G in the upper right corner and authenticate with Google.</h2>
+    <h4>Alternatively, give Dallas a 6 pack of beer and he'll do it for you</h4>
+  </div>
 {{/if}}

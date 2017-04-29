@@ -1,5 +1,5 @@
 <div class="question-card">
-  {{#paper-card as |card|}}
+{{#paper-card as |card|}}
   {{#card.title as |title|}}
     {{#title.text as |text|}}
       {{#text.headline}}{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}{{/text.headline}}
@@ -7,7 +7,7 @@
     {{/title.text}}
   {{/card.title}}
   {{#card.content}}
-  <p>{{question.body}}</p>
+    <p>{{question.body}}</p>
   {{/card.content}}
   {{#card.actions}}
   {{#if session.isAuthenticated}}
@@ -30,39 +30,37 @@
       {{/title.text}}
     {{/card.title}}
     {{#card.content}}
-    {{#if session.isAuthenticated}}
-      {{#paper-form onSubmit=(action "saveAnswer") as |form|}}
+      {{#if session.isAuthenticated}}
+        {{#paper-form onSubmit=(action "saveAnswer") as |form|}}
+          <div class="layout-row layout-align-space-around-center">
+            <div class="flex-90 layout-column">
+              {{paper-input textarea=true block=true label="Text" maxlength=666 passThru=(hash rows=2 maxRows=2) value=text onChange=(action (mut text))}}
+            </div>
+          </div>
+          <div class="layout-row">
+            {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
+          </div>
+        {{/paper-form}}
+      {{/if}}
         <div class="layout-row layout-align-space-around-center">
-          <div class="flex-90 layout-column">
-            {{paper-input textarea=true block=true label="Text" maxlength=666 passThru=(hash rows=2 maxRows=2) value=text onChange=(action (mut text))}}
+          <div class="flex layout-column comment-card">
+            {{#paper-list}}
+              {{#each question.answers as |answer|}}
+                  {{paper-divider}}
+                  {{#paper-item class="md-3-line md-long-text"}}
+                    <img src={{answer.user.photoURL}} alt={{answer.user.name}} class="md-avatar"/>
+                    <div class="md-list-item-text">
+                      <h3>{{answer.user.name}}</h3>
+                      <p style="word-break: break-all; word-wrap: break-word;">{{answer.text}}</p>
+                    </div>
+                  {{/paper-item}}
+              {{else}}
+                <p>This post has no answers, be the first to answer.</p>
+              {{/each}}
+            {{/paper-list}}
           </div>
         </div>
-        <div class="layout-row">
-          {{#form.submit-button raised=true primary=true}}Submit{{/form.submit-button}}
-        </div>
-      {{/paper-form}}
-    {{/if}}
-      <div class="layout-row layout-align-space-around-center">
-        <div class="flex layout-column comment-card">
-          {{#paper-list}}
-            {{#each question.answers as |answer|}}
-                {{paper-divider}}
-                {{#paper-item class="md-3-line md-long-text"}}
-                  <img src={{answer.user.photoURL}} alt={{answer.user.name}} class="md-avatar"/>
-                  <div class="md-list-item-text">
-                    <h3>{{answer.user.name}}</h3>
-                    <p style="word-break: break-all; word-wrap: break-word;">{{answer.text}}</p>
-                  </div>
-                {{/paper-item}}
-            {{else}}
-              <p>This post has no answers, be the first to answer.</p>
-            {{/each}}
-          {{/paper-list}}
-        </div>
-      </div>
-
     {{/card.content}}
   {{/paper-card}}
-
-  {{/liquid-if}}
+{{/liquid-if}}
 </div>

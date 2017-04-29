@@ -14,16 +14,4 @@ export default Ember.Service.extend({
       return question.save();
     })
   },
-  // upvoteAnswer(params) {
-  //   var user = params.user;
-  //   var question = params.question;
-  //   answer.get('points').addObject(point);
-  //   answer.save();
-  // },
-  // downvoteAnswer(params) {
-  //   var user = params.user;
-  //   var question = params.question;
-  //   answer.get('points').removeObject(point);
-  //   answer.save();
-  // }
 });
